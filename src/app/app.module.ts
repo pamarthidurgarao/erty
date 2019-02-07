@@ -20,7 +20,7 @@ const routes: Routes = [
     HeaderComponent,
     SidebarComponent,
     DashboardComponent,
-    UsersComponent
+    UsersComponent,
   ],
   imports: [
     BrowserModule,
