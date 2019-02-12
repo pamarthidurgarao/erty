@@ -5,17 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
 import { SidebarComponent } from './common/sidebar/sidebar.component';
-import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersComponent } from './users/users.component';
-import { UserService } from './service/user.service';
 import { HttpClientModule } from "@angular/common/http";
+import { UsersModule } from './users/users.module';
+import { AppRoutingModule } from './app.routing.module';
 
-const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'users', component: UsersComponent }
-];
 
 @NgModule({
   declarations: [
@@ -23,15 +18,14 @@ const routes: Routes = [
     HeaderComponent,
     SidebarComponent,
     DashboardComponent,
-    UsersComponent,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
-    FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    UsersModule,
+    AppRoutingModule
   ],
-  providers: [UserService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

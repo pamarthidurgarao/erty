@@ -13,7 +13,8 @@
     <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#exampleModal" style="margin-top:20px; float:right;">
       Add User
     </button>
-
+    <a routerLink="add">Add User</a>
+    <a routerLink="list">List Users</a>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -28,7 +29,7 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="inputEmail4">Email</label>
-                  <input [(ngModel)]="user.userEmail" type="email" class="form-control"  name="email" id="inputEmail4" placeholder="Email">
+                  <input [(ngModel)]="user.userEmail" type="email" class="form-control" name="email" id="inputEmail4" placeholder="Email">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputPassword4">Password</label>
@@ -59,7 +60,7 @@
                   <label for="inputZip">Zip</label>
                   <input type="number" [(ngModel)]="user.userZip" name="zip" class="form-control" id="inputZip">
                 </div>
-               
+
               </div>
             </form>
           </div>
@@ -75,28 +76,5 @@
 </div>
 
 <div class="row">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">City</th>
-        <th scope="col">State</th>
-        <th scope="col">Zip</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let user of users">
-        <th scope="row">1</th>
-        <td>{{user.userFirstName}}</td>
-        <td>{{user.userLastName}}</td>
-        <td>{{user.userEmail}}</td>
-        <td>{{user.userCity}}</td>
-        <td>{{user.userState}}</td>
-        <td>{{user.userZip}}</td>
-      </tr>
-    </tbody>
-  </table>
+  <router-outlet></router-outlet>
 </div>
