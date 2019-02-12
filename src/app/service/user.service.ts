@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { UserModel } from '../models/user-model';
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +29,7 @@ export class UserService {
     return this.users
   }
 
-  addUser(user: UserModel) {
-    this.users.push(user);
+  public addUser(obj: any) {
+   return obj;
   }
 }
