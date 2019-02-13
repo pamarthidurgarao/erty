@@ -9,6 +9,7 @@ import { UserService } from '../service/user.service';
 export class UsersComponent implements OnInit {
 
   // form variable
+  
  
   user = new UserModel();
 arraydata:any = [];
