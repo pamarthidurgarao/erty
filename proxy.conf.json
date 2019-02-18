@@ -1,0 +1,7 @@
+{
+    "/api_new/*": {
+        "target": "https://www.esay.in",
+        "secure": false,
+        "changeOrigin": true
+    }
+}

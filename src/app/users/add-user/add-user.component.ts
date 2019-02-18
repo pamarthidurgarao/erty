@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators, FormArray, AbstractControl } from '@angular/forms';
+import { UserService } from '../../service/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-user',
@@ -10,10 +12,14 @@ export class AddUserComponent implements OnInit {
 
 
   labs = ["User1", "User2", "User3"];
-
+  birthday = new Date();
+  a = "hai";
 
   userForm = this.fb.group({
-    firstName: ['', [Validators.required, Validators.minLength(4), Validators.pattern('^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$'), Validators.maxLength(30)]],
+    firstName: ['', Validators.compose([
+      Validators.required,
+      // Validators.pattern('^[0-9]{3,9}$')
+    ])],
     lastName: [''],
     email: [''],
     mobile: [''],
@@ -24,16 +30,16 @@ export class AddUserComponent implements OnInit {
     gender: [''],
     exArmy: [false],
     ph: [false],
-    laboratories: new FormArray([], this.minLengthArray(2))
+    laboratories: new FormArray([])
   });
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private userService: UserService, private router: Router) {
+  }
 
   ngOnInit() {
   }
 
   onChange(lab, isChecked: boolean) {
-    debugger
     const emailFormArray = <FormArray>this.userForm.controls.laboratories;
 
     if (isChecked) {
@@ -47,7 +53,14 @@ export class AddUserComponent implements OnInit {
   }
   saveUser() {
     console.log(this.userForm.value);
-    debugger
+    this.userService.addUser(this.userForm.value).subscribe(res => {
+      debugger
+      this.userForm.reset();
+      this.router.navigate(['/users/list']);
+    })
+  }
+
+  doEve() {
   }
 
   minLengthArray(min: number) {

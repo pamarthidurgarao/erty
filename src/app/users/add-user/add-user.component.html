@@ -27,6 +27,10 @@
     <label for="inputAddress2">Last Name</label>
     <input type="text" class="form-control" formControlName="lastName" placeholder="Apartment, studio, or floor">
   </div>
+  <div class="form-group">
+    <label for="inputAddress2">Phone</label>
+    <input type="text" class="form-control" formControlName="mobile" placeholder="Mobile no">
+  </div>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputCity">City</label>
@@ -73,5 +77,9 @@
     </div>
   </div>
   <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid">Submit</button>
-  <p>{{userForm.value |json}}</p>
 </form>
+
+<p>The hero's birthday is {{ birthday | date:'fullDate' |uppercase}}</p>
+<button (click)="doEve()">cccc</button>
+<p>{{a}}</p>
+

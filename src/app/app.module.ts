@@ -10,6 +10,7 @@ import { UsersComponent } from './users/users.component';
 import { HttpClientModule } from "@angular/common/http";
 import { UsersModule } from './users/users.module';
 import { AppRoutingModule } from './app.routing.module';
+import { LoginComponent } from './common/login/login.component';
 
 
 @NgModule({
@@ -18,12 +19,14 @@ import { AppRoutingModule } from './app.routing.module';
     HeaderComponent,
     SidebarComponent,
     DashboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     UsersModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
