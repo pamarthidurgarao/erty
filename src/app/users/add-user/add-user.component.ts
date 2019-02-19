@@ -21,7 +21,7 @@ export class AddUserComponent implements OnInit {
     city: [''],
     zip: [''],
     state: [''],
-    gender: [''],
+    gender: ['Male'],
     exArmy: [false],
     ph: [false],
     laboratories: new FormArray([], this.minLengthArray(2))
