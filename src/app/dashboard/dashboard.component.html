@@ -1,6 +1,12 @@
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Users</li>
-  </ol>
-</nav>
+<app-header></app-header>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2 sideBar">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-10" style="border: 1px solid rgba(0, 84, 138, 0.2);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

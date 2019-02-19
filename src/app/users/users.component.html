@@ -19,17 +19,17 @@
           <a routerLink="/dashboard">Dashboard1</a>
         </li>
         <li class="breadcrumb-item" aria-current="page">
-          <a routerLink="/user">Users</a>
+          <a routerLink="/dashboard/users">Users</a>
         </li>
         <li class="breadcrumb-item">
           <a routerLink="add">Add User</a>
         </li>
-        <li class="breadcrumb-item">   
-           <a routerLink="list">List Users</a>
-          </li>
+        <li class="breadcrumb-item">
+          <a routerLink="list">List Users</a>
+        </li>
       </ol>
     </nav>
-    
+
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -86,12 +86,10 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
-
 <div class="row">
   <div class="col-md-12">
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
   </div>
 </div>
