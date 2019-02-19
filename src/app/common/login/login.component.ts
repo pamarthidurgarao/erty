@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    debugger
+//    debugger
     this.userService.login(this.mobileNo, this.password).subscribe(res => {
       console.log(res);
       if (res.status) {

@@ -11,6 +11,11 @@ import { HttpClientModule } from "@angular/common/http";
 import { UsersModule } from './users/users.module';
 import { AppRoutingModule } from './app.routing.module';
 import { LoginComponent } from './common/login/login.component';
+import { ProductnameComponent } from './product/productname/productname.component';
+import { AddproductComponent } from './product/addproduct/addproduct.component';
+import { ListproductComponent } from './product/listproduct/listproduct.component';
+
+
 
 
 @NgModule({
@@ -19,7 +24,10 @@ import { LoginComponent } from './common/login/login.component';
     HeaderComponent,
     SidebarComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    ProductnameComponent,
+    AddproductComponent,
+    ListproductComponent
   ],
   imports: [
     BrowserModule,

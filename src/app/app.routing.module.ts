@@ -6,11 +6,20 @@ import { UsersComponent } from './users/users.component';
 import { AddUserComponent } from './users/add-user/add-user.component';
 import { ListUserComponent } from './users/list-user/list-user.component';
 import { LoginComponent } from './common/login/login.component';
+import { ProductnameComponent } from './product/productname/productname.component';
+import { AddproductComponent } from './product/addproduct/addproduct.component';
+import { ListproductComponent } from './product/listproduct/listproduct.component';
+
+
+
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   {
-    path: 'dashboard', component: DashboardComponent, children: [{
+    path: 'dashboard', component: DashboardComponent, children:
+     [
+      {
       path: 'users', component: UsersComponent, children: [
         {
           path: 'add',
@@ -19,10 +28,25 @@ const routes: Routes = [
         {
           path: 'list',
           component: ListUserComponent
-        }]
-    }]
+        }
+      ]
+      
+    },
+    { path: 'products', component: ProductnameComponent,children: [
+        {
+          path: 'addproduct',
+          component: AddproductComponent,
+        },
+        {
+          path: 'listproduct',
+          component: ListproductComponent
+        }
+      ] },
+  
+  ]
   },
   { path: 'login', component: LoginComponent },
+ 
 
 ];
 

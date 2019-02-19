@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     let data = localStorage.getItem('user');
     if (!data) {
-      this.router.navigate(['login']);
+      //this.router.navigate(['login']);
     }
   }
 }
