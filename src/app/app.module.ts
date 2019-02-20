@@ -14,6 +14,10 @@ import { LoginComponent } from './common/login/login.component';
 import { ProductnameComponent } from './product/productname/productname.component';
 import { AddproductComponent } from './product/addproduct/addproduct.component';
 import { ListproductComponent } from './product/listproduct/listproduct.component';
+import { MobileNumbrtFormatDirective } from './directives/mobile-numbrt-format.directive';
+import { UsNumbrtFormatDirective } from './directives/us-numbrt-format.directive';
+import { UnlessDirective } from './directives/unless.directive';
+import { MobileFormatPipe } from './pipe/mobile-format.pipe';
 
 
 
@@ -27,7 +31,11 @@ import { ListproductComponent } from './product/listproduct/listproduct.componen
     LoginComponent,
     ProductnameComponent,
     AddproductComponent,
-    ListproductComponent
+    ListproductComponent,
+    MobileNumbrtFormatDirective,
+    UsNumbrtFormatDirective,
+    UnlessDirective,
+    MobileFormatPipe
   ],
   imports: [
     BrowserModule,

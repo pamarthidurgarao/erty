@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListproductComponent implements OnInit {
 
+  johnny="9966532764";
   constructor() { }
 
   ngOnInit() {

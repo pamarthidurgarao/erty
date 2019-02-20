@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddproductComponent implements OnInit {
 
+  cond = true;
   constructor() { }
 
   ngOnInit() {
   }
 
+  chang() {
+    this.cond = !this.cond;
+  }
 }
