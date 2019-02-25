@@ -18,6 +18,8 @@ import { MobileNumbrtFormatDirective } from './directives/mobile-numbrt-format.d
 import { UsNumbrtFormatDirective } from './directives/us-numbrt-format.directive';
 import { UnlessDirective } from './directives/unless.directive';
 import { MobileFormatPipe } from './pipe/mobile-format.pipe';
+import { Comp2compComponent } from './common/comp2comp/comp2comp.component';
+import { ChildComponent } from './common/comp2comp/child/child.component';
 
 
 
@@ -35,7 +37,9 @@ import { MobileFormatPipe } from './pipe/mobile-format.pipe';
     MobileNumbrtFormatDirective,
     UsNumbrtFormatDirective,
     UnlessDirective,
-    MobileFormatPipe
+    MobileFormatPipe,
+    Comp2compComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,
