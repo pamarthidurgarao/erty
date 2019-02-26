@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { ChildComponent } from './child/child.component';
+import { DataService } from '../../service/data.service';
 
 @Component({
   selector: 'app-comp2comp',
@@ -8,21 +9,17 @@ import { ChildComponent } from './child/child.component';
 })
 export class Comp2compComponent implements OnInit, AfterViewInit {
 
+  message: string;
   parentData = 100000000;
   @ViewChild
     (ChildComponent) child;
-  constructor() { }
-
+  constructor(private dataService: DataService) { }
   ngOnInit() {
-    console.log("1111111111");
+    this.dataService.currentMessage.subscribe(msg => this.message = msg)
   }
   ngAfterViewInit() {
-    console.log("222222222");
-    console.log(this.child.count);
   }
-
   receiveMessage($event) {
     this.parentData = $event;
   }
-
 }

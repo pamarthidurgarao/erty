@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { DataService } from '../../../service/data.service';
 
 @Component({
   selector: 'app-child',
@@ -7,10 +8,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
+  msg: string;
   @Input() count: number;
   @Output() abc = new EventEmitter<number>();
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
     this.count = this.count + 5;
@@ -20,4 +22,10 @@ export class ChildComponent implements OnInit {
     this.count = this.count + 1;
     this.abc.emit(this.count);
   }
+
+  communicate() {
+    debugger
+    this.dataService.store(this.msg);
+  }
+
 }

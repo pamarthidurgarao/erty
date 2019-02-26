@@ -1,4 +1,9 @@
-<p>
-  child works! {{count}}
-</p>
-<button (click)="inc()">count</button>
+<div style="background-color:red">
+  <p>
+    child works! {{count}}
+  </p>
+  <button (click)="inc()">count</button>
+
+  <input type="text" [(ngModel)]="msg">
+  <button (click)="communicate()">Send</button>
+</div>

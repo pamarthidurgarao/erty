@@ -20,6 +20,7 @@ import { UnlessDirective } from './directives/unless.directive';
 import { MobileFormatPipe } from './pipe/mobile-format.pipe';
 import { Comp2compComponent } from './common/comp2comp/comp2comp.component';
 import { ChildComponent } from './common/comp2comp/child/child.component';
+import { DataService } from './service/data.service';
 
 
 
@@ -46,9 +47,9 @@ import { ChildComponent } from './common/comp2comp/child/child.component';
     HttpClientModule,
     UsersModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

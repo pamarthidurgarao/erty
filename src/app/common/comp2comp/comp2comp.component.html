@@ -1,4 +1,7 @@
-<p>
-  comp2comp works! {{parentData}} data from child {{child.count}}
-</p>
-<app-child [count]="parentData" (abc)="receiveMessage($event)"></app-child>
+<div style="background-color: aqua">
+  <p>
+    comp2comp works! {{parentData}} data from child {{child.count}}
+  </p>
+  <h2>{{message}}</h2>
+  <app-child [count]="parentData" (abc)="receiveMessage($event)"></app-child>
+</div>
